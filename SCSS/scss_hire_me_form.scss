@@ -1,0 +1,117 @@
+@import "variabili";
+
+h1,
+.Form p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: $text;
+    text-align: left;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+h1 {
+    padding-top: 60px;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    font-size: 30px;
+}
+ 
+.Form p {
+    padding-top: 10px;
+    font-size: 20px;
+    display: flex;
+}
+ 
+.image {
+    float:right;
+    max-width: 450px;
+    padding-left: 30px;
+    padding-top: 140px;
+    padding-right: 20px;
+}
+/* FORM */
+form {
+    margin: 0;
+    padding: 20px;
+}
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+legend {
+    display: none;
+    margin: 0;
+    padding: 0;
+}
+label {
+    margin: 0;
+    padding: 0 0 0 3px;
+    color: $formlabelscuro;
+}
+label.checkbox {
+    color: $formcheckbox;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+textarea,
+select {
+    width: 100%;
+    padding: 5px 10px;
+    margin: 3px 0 15px 0;
+    display:inline-block; 
+    border: none;
+    border-bottom: 1px solid $inputborder;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 1.1em;
+    background-color: $inputbgcolor;
+}
+textarea {
+    min-height: 150px;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+    border:none;
+    color: $formlabelscuro;
+    background-color: $inputselectedbg;
+    border-bottom: 1px solid $formlabelscuro;
+} 
+button {
+    background-color: $formlabelscuro;
+    color: $buttoncolor;
+    border: 1px solid $buttonborder;
+    border-radius: 8px;
+    width: 50%;
+    padding: 5px;
+    font-size: 1.2em;
+    margin-left: 50%;
+}
+button:hover {
+    background-color: $SIscuro;
+} 
+
+/* RESPONSIVE IN 1024PX, 768PX, 430PX */
+@media screen and (min-width: 1430px) {
+    form {
+        width: 50%;
+    }
+    .image {
+        max-width: 700px;
+        padding-top: 40px;
+        padding-left: 20px;
+    }
+}
+@media  screen and (max-width: 768px) {
+    .image {
+        display: none;
+    }
+    form {
+        width: 100%;
+    }
+}

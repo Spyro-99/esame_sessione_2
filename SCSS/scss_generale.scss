@@ -1,0 +1,175 @@
+@import "variabili";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    line-height: 1.2;
+}
+
+/* BODY */
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px;
+    background-color: $bgscuro;
+    display: flex;
+    flex-direction: column;
+}
+ 
+/* MENU */
+.topnav {
+    background-color: $navbgscuro;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    top: 0;
+    position: fixed;
+}
+
+.topnav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.topnav ul li {
+    float: right;
+}
+
+.topnav ul li a {
+    display: block;
+    color: $navcolorscuro;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.topnav ul li a:hover {
+    background-color: $navbgscuro;
+    color: $navcolorscuro;
+}
+ 
+.logo {
+    position: absolute;
+    height: auto;
+    padding-left: 16px;
+    padding-top: 10px;
+}
+
+/* FOOTER */
+footer {
+    background-color: $footerbgscuro;
+    margin-top: 100px; 
+}
+
+.footerContainer {
+    width: 100%;
+    padding: 30px 30px 30px;
+}
+
+.socialIcons {
+    display: flex;
+    justify-content: center;
+}
+
+.socialIcons a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: $SIbgscuro;
+    margin: 15px;
+    border-radius: 25%;
+}
+
+.socialIcons a i {
+    font-size: 2em;
+    color: $SIscuro;
+}
+
+/* Hover on Social Media Incons */
+.socialIcons a:hover {
+    background-color: $SIhoverbgscuro;
+    transition: 0.5s;
+}
+
+.socialIcons a:hover i {
+    color: $SIhoverscuro;
+    transition: 0.5s;
+}
+
+/* Footer Nav and Bottom*/
+.footerNav {
+    margin: 30px;
+    position: relative;
+}
+
+.footerNav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin: -25px 0 0 -25px;
+}
+
+.footerNav ul li a {
+    color: $footernavscuro;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 0.9em;
+    opacity: 0.7;
+}
+
+.footerNav ul li a:hover {
+    opacity: 1;
+}
+
+.footerBottom {
+    background-color: $footerbottombgscuro;
+    padding: 20PX;
+    text-align: center;
+}
+
+.footerBottom p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: $footerbottomPscuro;
+}
+.designer {
+    opacity: 0.7;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0 5px;
+}
+
+/* RESPONSIVE IN 1024PX, 768PX, 430PX, 320PX */
+@media screen and (max-width: 768px) {
+    .footerNav ul {
+        flex-direction: column;
+    }
+    .footerNav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }   
+}
+
+@media screen and (max-width: 430px) {
+    .footerNav ul {
+        flex-direction: column;
+    }
+    .footerNav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .footerNav ul {
+        flex-direction: column;
+    }
+    .footerNav ul li {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        font-size: 0.9em;
+        margin: 10px;
+    }
+}
