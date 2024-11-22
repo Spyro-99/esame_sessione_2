@@ -1,3 +1,14 @@
+<?php
+    require_once('Utility.php');
+    $id = $_GET["workId"];
+
+
+    use MieClassi\Utility as UT;
+
+    $file = "fileJSON/portfolioCards.json"; // File contenente card dei lavori mostrati
+    $arr = json_decode(UT::leggiTesto($file));
+    $selezionato = UT::trovaDaId($id, $arr)
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,42 +25,29 @@
 <body>    
     <nav class="topnav">
         <div class="logo">
-            <a href="index.html" title="clicca per accedere all'index"><img src="./img/logo_personale_negativo.png" alt="logo" width="30"></a>
+            <a href="index.php" title="clicca per accedere all'index"><img src="./img/logo_personale_negativo.png" alt="logo" width="30"></a>
         </div>
         <ul> 
-            <li><a href="Hire_me_Form.html" title="clicca per accedere al form">HIRE ME</a></li>  
-            <li><a href="Portfolio.html" title="clicca per accedere al portfolio">PORTFOLIO</a></li>            
+            <li><a href="Hire_me_Form.php" title="clicca per accedere al form">HIRE ME</a></li>  
+            <li><a href="Portfolio.php" title="clicca per accedere al portfolio">PORTFOLIO</a></li>            
         </ul>
     </nav>
     <div class="image-container">
         
         <img src="./img/Portfolio_work_img.jpg" alt="Work title" class="image">
         <div class="text-container">
-            <h1>Work title</h1> 
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id lectus metus. Etiam placerat, 
-                mi sit amet eleifend lobortis, libero tellus placerat lectus, eu suscipit sapien tellus viverra sapien. 
-                Vivamus accumsan, neque sed hendrerit dictum, ligula lorem tristique quam, volutpat laoreet ipsum erat vel nunc. 
-                Fusce at porttitor nibh. Fusce est leo, ullamcorper sit amet efficitur in, semper vitae lectus.    
-                Morbi congue ante placerat molestie iaculis. Donec vel nisi ut nisl rutrum dictum.  
-            </p>
+            <?php
+                echo "<h1>".$selezionato->heading."</h1> 
+                <p>".$selezionato->description."</p>";
+            ?>
         </div>
     </div>
     <hr> 
     <h2>My services</h2>   
     <div class="card-container">
-       <div class="card">
-            <h3>Ux designs</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id lectus metus.</p>
-       </div>
-       <div class="card">
-            <h3>Ui designs</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id lectus metus.</p>
-       </div>
-       <div class="card">
-            <h3>Web developer</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id lectus metus.</p>
-       </div>
+        <?php
+            require('worklist.php')
+        ?>
     </div>
     
     <footer> 

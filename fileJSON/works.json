@@ -1,0 +1,21 @@
+[ 
+    {
+        "id" : 0,
+        "nameWork" : "Ux designs",
+        "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id lectus metus."
+    },
+    
+    {
+        "id" : 1,
+        "nameWork" : "Ui designs",
+        "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id lectus metus."
+
+    },
+    
+    {
+        "id" : 2,
+        "nameWork" : "Web developer",
+        "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id lectus metus."
+
+    }
+]

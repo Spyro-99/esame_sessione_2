@@ -1,0 +1,30 @@
+[
+    {
+        "id": 0,
+        "heading": "Website Redesign for E-Commerce Platform",
+        "description": "A complete overhaul of an e-commerce website to enhance user experience, improve mobile responsiveness, and streamline the checkout process. The project included a modernized UI, optimized performance, and integration of new features like personalized recommendations.",
+        "img": "",
+        "link": ""
+    },
+    {
+        "id": 1,
+        "heading": "Mobile App for Fitness Tracking",
+        "description": "Designed and developed a mobile application for fitness enthusiasts to track their workouts, nutrition, and progress over time. The app features real-time workout tracking, personalized workout plans, and a social community for sharing achievements.",
+        "img": "",
+        "link": ""
+    },
+    {
+        "id": 2,
+        "heading": "Brand Identity for Startup Business",
+        "description": "Created a comprehensive brand identity for a startup, including logo design, color palette, typography, and brand guidelines. The goal was to establish a professional and memorable brand presence that resonated with the target market and set the business apart from competitors.",
+        "img": "",
+        "link": ""
+    },
+    {
+        "id": 3,
+        "heading": "Corporate Website Development",
+        "description": "Developed a sleek and responsive corporate website for a large enterprise, focusing on showcasing their services, case studies, and client testimonials. The website was designed with an emphasis on clarity, functionality, and ease of navigation, while reflecting the company’s professionalism.",
+        "img": "",
+        "link": ""
+    }
+]

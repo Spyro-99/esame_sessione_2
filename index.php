@@ -14,11 +14,11 @@
 <body>    
     <nav class="topnav">
         <div class="logo">
-            <a href="index.html" title="clicca per accedere all'index"><img src="./img/logo_personale_negativo.png" alt="logo" width="30"></a>
+            <a href="index.php" title="clicca per accedere all'index"><img src="./img/logo_personale_negativo.png" alt="logo" width="30"></a>
         </div>
         <ul> 
-            <li><a href="Hire_me_Form.html" title="clicca per accedere al form">HIRE ME</a></li>  
-            <li><a href="Portfolio.html" title="clicca per accedere al portfolio">PORTFOLIO</a></li>            
+            <li><a href="Hire_me_Form.php" title="clicca per accedere al form">HIRE ME</a></li>  
+            <li><a href="Portfolio.php" title="clicca per accedere al portfolio">PORTFOLIO</a></li>            
         </ul>
     </nav>
     <section class="riga">
@@ -36,18 +36,9 @@
 <hr>
     <h4>My services</h4> 
     <div class="card-container">
-        <div class="card">
-             <h3>Ux designs</h3>
-             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id lectus metus.</p>
-        </div>
-        <div class="card">
-             <h3>Ui designs</h3>
-             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id lectus metus.</p>
-        </div>
-        <div class="card">
-             <h3>Web developer</h3>
-             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id lectus metus.</p>
-        </div>
+        <?php
+            require('worklist.php')
+        ?>
      </div>
     <footer> 
         <div class="footerContainer">

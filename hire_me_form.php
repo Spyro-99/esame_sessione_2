@@ -14,11 +14,11 @@
 <body>    
     <nav class="topnav">
         <div class="logo">
-            <a href="index.html" title="clicca per accedere all'index"><img src="./img/logo_personale_negativo.png" alt="logo" width="30"></a>
+            <a href="index.php" title="clicca per accedere all'index"><img src="./img/logo_personale_negativo.png" alt="logo" width="30"></a>
         </div>
         <ul> 
-            <li><a href="Hire_me_Form.html" title="clicca per accedere al form">HIRE ME</a></li>  
-            <li><a href="Portfolio.html" title="clicca per accedere al portfolio">PORTFOLIO</a></li>            
+            <li><a href="Hire_me_Form.php" title="clicca per accedere al form">HIRE ME</a></li>  
+            <li><a href="Portfolio.php" title="clicca per accedere al portfolio">PORTFOLIO</a></li>            
         </ul>
     </nav>
     <section class="Form">
@@ -27,7 +27,7 @@
             Fill the form to request information
         </p>
         <img src="./img/Web_Development_Form.jpeg" alt="Work example" class="image">
-        <form>
+        <form action="aggiungi_richiesta.php" method="post">
             
             <fieldset>
                 <legend>Contattaci</legend>

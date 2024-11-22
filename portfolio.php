@@ -1,3 +1,11 @@
+<?php
+    require_once('Utility.php');
+
+    use MieClassi\Utility as UT;
+
+    $file = "fileJSON/portfolioCards.json"; // File contenente card dei lavori mostrati
+    $portfolio = json_decode(UT::leggiTesto($file));
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,11 +22,11 @@
 <body>    
     <nav class="topnav">
         <div class="logo">
-            <a href="index.html" title="clicca per accedere all'index"><img src="./img/logo_personale_negativo.png" alt="logo" width="30"></a>
+            <a href="index.php" title="clicca per accedere all'index"><img src="./img/logo_personale_negativo.png" alt="logo" width="30"></a>
         </div>
         <ul> 
-            <li><a href="Hire_me_Form.html" title="clicca per accedere al form">HIRE ME</a></li>  
-            <li><a href="Portfolio.html" title="clicca per accedere al portfolio">PORTFOLIO</a></li>            
+            <li><a href="Hire_me_Form.php" title="clicca per accedere al form">HIRE ME</a></li>  
+            <li><a href="Portfolio.php" title="clicca per accedere al portfolio">PORTFOLIO</a></li>            
         </ul>
     </nav>
     <header>
@@ -26,26 +34,18 @@
     </header>
     <section class="portfolio">
         <div class="card-container">
-            <div class="card">
-                <img src="./img/webpage_creation_portfolio.png" alt="work-image">
-                <h2>Work title</h2>       
-                <form action="Portfolio_Work_page.html" class="btn" title="clicca per accedere alla pagina del lavoro"><button type="submit">Read More</button></form>             
-            </div>
-            <div class="card">
-                <img src="./img/webpage_creation_portfolio.png" alt="work-image">
-                <h2>Work title 2</h2>
-                <form action="Portfolio_Work_page.html" class="btn" title="clicca per accedere alla pagina del lavoro"><button type="submit">Read More</button></form>               
-            </div>
-            <div class="card">
-                <img src="./img/webpage_creation_portfolio.png" alt="work-image">
-                <h2>Work title 3</h2>
-                <form action="Portfolio_Work_page.html" class="btn" title="clicca per accedere alla pagina del lavoro"><button type="submit">Read More</button></form>          
-            </div>
-            <div class="card">
-                <img src="./img/webpage_creation_portfolio.png" alt="work-image">
-                <h2>Work title 4</h2>
-                <form action="Portfolio_Work_page.html" class="btn" title="clicca per accedere alla pagina del lavoro"><button type="submit">Read More</button></form>             
-            </div>
+            <?php
+                foreach ($portfolio as $work) {
+                    echo $work->id;
+                    echo  "<div class='card'>
+                        <img src='./img/webpage_creation_portfolio.png' alt='work-image'>
+                        <h2>".$work->heading."</h2>       
+                        <a href='portfolio_work_page.php?workId=".$work->id."' class='btn' title='clicca per accedere alla pagina ".$work->heading."'>
+                            <button type='submit'>Read More</button>
+                        </a>             
+                    </div>";
+                }
+            ?>
         </div>
     </section>
     
