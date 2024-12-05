@@ -8,3 +8,13 @@
 Test finale per funzionamento form
 
 ------------------------------
+------------------------------
+<strong>Nome:</strong> Gianluca
+<strong>Cognome:</strong>: Cognome
+<strong>E-Mail:</strong> nevkjerv@mail.com
+<strong>Telefono:</strong> 
+<strong>Oggetto:</strong> test finale 
+<strong>Testo:</strong>
+prova finale di riuscita 
+
+------------------------------

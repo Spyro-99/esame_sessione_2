@@ -11,7 +11,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio">
+    <meta name="description" content="portfolio">
     <link href="./CSS/scss_generale.min.css" rel="stylesheet">
     <link href="./CSS/scss_portfolio.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
@@ -25,8 +25,8 @@
             <a href="index.php" title="clicca per accedere all'index"><img src="./img/logo_personale_negativo.png" alt="logo" width="30"></a>
         </div>
         <ul> 
-            <li><a href="Hire_me_Form.php" title="clicca per accedere al form">HIRE ME</a></li>  
-            <li><a href="Portfolio.php" title="clicca per accedere al portfolio">PORTFOLIO</a></li>            
+            <li><a href="hire_me_form.php" title="clicca per accedere al form">HIRE ME</a></li>  
+            <li><a href="portfolio.php" title="clicca per accedere al portfolio">PORTFOLIO</a></li>            
         </ul>
     </nav>
     <header>

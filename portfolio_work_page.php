@@ -14,13 +14,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio_Work_page">
+    <meta name="description" content="portfolio_work_page">
     <link href="./CSS/scss_generale.min.css" rel="stylesheet">
     <link href="./CSS/scss_portfolio_work_page.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
     crossorigin="anonymous" referrerpolicy="no-referrer">
-    <title>Portfolio_Work_page</title>
+    <title>portfolio_work_page</title>
 </head>
 <body>    
     <nav class="topnav">
@@ -28,15 +28,15 @@
             <a href="index.php" title="clicca per accedere all'index"><img src="./img/logo_personale_negativo.png" alt="logo" width="30"></a>
         </div>
         <ul> 
-            <li><a href="Hire_me_Form.php" title="clicca per accedere al form">HIRE ME</a></li>  
-            <li><a href="Portfolio.php" title="clicca per accedere al portfolio">PORTFOLIO</a></li>            
+            <li><a href="hire_me_form.php" title="clicca per accedere al form">HIRE ME</a></li>  
+            <li><a href="portfolio.php" title="clicca per accedere al portfolio">PORTFOLIO</a></li>            
         </ul>
     </nav>
     <div class="image-container">
         
         <img src="./img/Portfolio_work_img.jpg" alt="Work title" class="image">
         <div class="text-container">
-            <?php
+            <?php // Codice utilizzato per creare pagina dei lavori singoli in modo dinamico
                 echo "<h1>".$selezionato->heading."</h1> 
                 <p>".$selezionato->description."</p>";
             ?>
@@ -46,7 +46,7 @@
     <h2>My services</h2>   
     <div class="card-container">
         <?php
-            require('worklist.php')
+            require('worklist.php') // File che contiene le card con i servizi che svolgo
         ?>
     </div>
     

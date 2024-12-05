@@ -110,8 +110,8 @@ if ($inviato) {
             <a href="index.php" title="clicca per accedere all'index"><img src="./img/logo_personale_negativo.png" alt="logo" width="30"></a>
         </div>
         <ul> 
-            <li><a href="Hire_me_Form.php" title="clicca per accedere al form">HIRE ME</a></li>  
-            <li><a href="Portfolio.php" title="clicca per accedere al portfolio">PORTFOLIO</a></li>            
+            <li><a href="hire_me_form.php" title="clicca per accedere al form">HIRE ME</a></li>  
+            <li><a href="portfolio.php" title="clicca per accedere al portfolio">PORTFOLIO</a></li>            
         </ul>
     </nav>
     <?php
@@ -151,7 +151,7 @@ if ($inviato) {
         </section>
     <?php
     }else{
-        
+        // Codice php per pagina di invio modulo richiesta contatto
         $str = "<strong>Nome:</strong> %s<br>" .
             "<strong>Cognome:</strong>: %s<br>" .
             "<strong>E-Mail:</strong> %s<br>" .

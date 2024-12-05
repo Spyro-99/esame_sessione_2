@@ -17,8 +17,8 @@
             <a href="index.php" title="clicca per accedere all'index"><img src="./img/logo_personale_negativo.png" alt="logo" width="30"></a>
         </div>
         <ul> 
-            <li><a href="Hire_me_Form.php" title="clicca per accedere al form">HIRE ME</a></li>  
-            <li><a href="Portfolio.php" title="clicca per accedere al portfolio">PORTFOLIO</a></li>            
+            <li><a href="hire_me_form.php" title="clicca per accedere al form">HIRE ME</a></li>  
+            <li><a href="portfolio.php" title="clicca per accedere al portfolio">PORTFOLIO</a></li>            
         </ul>
     </nav>
     <section class="riga">
@@ -37,7 +37,7 @@
     <h4>My services</h4> 
     <div class="card-container">
         <?php
-            require('worklist.php')
+            require('worklist.php') // File che contiene le card con i servizi che svolgo
         ?>
      </div>
     <footer> 
