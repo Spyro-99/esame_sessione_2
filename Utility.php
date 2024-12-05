@@ -57,33 +57,6 @@ class Utility
     }
     //-----------------------------------------------------------------
     /**
-     * Funzione per leggere del testo di un file CSV
-     * 
-     * @param string $file Nome del file
-     * @return boolean|array
-     * 
-     */
-    public static function leggiTestoCSV($file)
-    {
-        $rit = false;
-        $riga = 0;
-        if (!$fp = fopen($file, 'r')) {
-            echo "Non posso aprire il file $file<br>";
-        } else {
-            if (is_readable($file) === false) {
-                echo "Il file $file non è leggibile<br>";
-            } else {
-                while (($data = fgetcsv($fp, null, ";")) !== false) {
-                    $rit[$riga] = $data;
-                    $riga++;
-                }
-            }
-        }
-        fclose($fp);
-        return $rit;
-    }
-    //-----------------------------------------------------------------
-    /**
      * 
      * Funzione per estrarre dal $_POST o dal $_GET la proprietà richiesta
      * 
