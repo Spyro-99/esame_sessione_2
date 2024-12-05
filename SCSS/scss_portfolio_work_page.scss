@@ -75,7 +75,8 @@ hr {
 
 .card {
     width: 250px;
-    background-color: $cardbg;
+    background-color: $primary;
+    box-shadow: inset 0px 0px 21px 10px $cardboxshadow;
     border-radius: 10px;
     overflow: auto;
     margin: 20px;

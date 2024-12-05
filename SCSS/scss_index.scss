@@ -34,13 +34,6 @@ hr {
     margin-right: 15px;
 }
 
-body {
-    background-image: url(../img/abstract_index_home.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;   
-}
 .riga {
     display: flex;
     flex-direction: column;
@@ -55,7 +48,8 @@ body {
 }
 
 .riquadro .main-card {
-    background-color: $formlabelscuro;
+    background-color: $primary;
+    box-shadow: inset 0px 0px 21px 10px $cardboxshadow;
     border-radius: 15px;
     padding: 50px;
     margin-top: 20px;
@@ -63,6 +57,7 @@ body {
     text-align: left;
     display: flex;
     flex-direction: column;
+    
 }
  .main-card p {
     font-size: 22px;
@@ -80,7 +75,8 @@ body {
 
 .card-container .card {
     width: 250px;
-    background-color: $cardbg;
+    background-color: $primary;
+    box-shadow: inset 0px 0px 21px 10px $cardboxshadow;
     border-radius: 10px;
     overflow: auto;
     margin: 20px;

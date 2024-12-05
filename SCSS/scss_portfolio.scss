@@ -36,10 +36,10 @@ h2 {
 
 .card {
     width: 400px;
-    background-color: $cardbg;
+    background-color: $primary;
+    box-shadow: inset 0px 0px 21px 10px $cardboxshadow;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0px 2px 4px $cardboxshadow;
     margin: 20px;
 } 
 
@@ -60,7 +60,7 @@ button {
     font-size: 1.2em;
 }
 button:hover {
-    background-color: $inputselectedbg;
+    background-color: $accent;
 }
 
 /* RESPONSIVE IN 1024PX, 768PX, 430PX */

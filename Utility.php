@@ -3,11 +3,9 @@
 namespace MieClassi;
 
 /**
- * Questa classe contiene tutti i metodi utili
- * @author Mario Rossi
- * @copyright 2022
- * @license LGPL
- * @version 1.0.0
+ * Questa classe contiene tutte le funzioni utili
+ * @author Erik Pontecorvi
+ * @copyright 2024
  */
 
 class Utility

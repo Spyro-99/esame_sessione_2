@@ -46,10 +46,7 @@ legend {
 label {
     margin: 0;
     padding: 0 0 0 3px;
-    color: $formlabelscuro;
-}
-label.checkbox {
-    color: $formcheckbox;
+    color: $primary;
 }
 input[type="text"],
 input[type="email"],
@@ -62,11 +59,11 @@ select {
     margin: 3px 0 15px 0;
     display:inline-block; 
     border: none;
-    border-bottom: 1px solid $inputborder;
+    border-bottom: 1px solid $input;
     box-sizing: border-box;
     outline: none;
     font-size: 1.1em;
-    background-color: $inputbgcolor;
+    background-color: $inputbackground;
 }
 textarea {
     min-height: 150px;
@@ -78,14 +75,15 @@ input[type="password"]:focus,
 textarea:focus,
 select:focus {
     border:none;
-    color: $formlabelscuro;
-    background-color: $inputselectedbg;
-    border-bottom: 1px solid $formlabelscuro;
+    color: $primary;
+    background-color: $accent;
+    border-bottom: 1px solid $primary;
 } 
 button {
-    background-color: $formlabelscuro;
+    background-color: $primary;
     color: $buttoncolor;
     border: 1px solid $buttonborder;
+    box-shadow: inset 0px 0px 11px 5px $cardboxshadow;
     border-radius: 8px;
     width: 50%;
     padding: 5px;
@@ -93,7 +91,7 @@ button {
     margin-left: 50%;
 }
 button:hover {
-    background-color: $SIscuro;
+    background-color: $buttonborder;
 } 
 
 /* RESPONSIVE IN 1024PX, 768PX, 430PX */

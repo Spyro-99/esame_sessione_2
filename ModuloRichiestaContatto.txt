@@ -1,0 +1,10 @@
+------------------------------
+<strong>Nome:</strong> Francesco
+<strong>Cognome:</strong>: cognome
+<strong>E-Mail:</strong> bakndqkjd@mail.com
+<strong>Telefono:</strong> 
+<strong>Oggetto:</strong> prova 1
+<strong>Testo:</strong>
+Test finale per funzionamento form
+
+------------------------------

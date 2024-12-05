@@ -11,14 +11,14 @@
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 10px;
-    background-color: $bgscuro;
+    background-color: $background;
     display: flex;
     flex-direction: column;
 }
  
 /* MENU */
 .topnav {
-    background-color: $navbgscuro;
+    background-color: $navbg;
     z-index: 10;
     left: 0;
     right: 0;
@@ -38,15 +38,15 @@ body {
 
 .topnav ul li a {
     display: block;
-    color: $navcolorscuro;
+    color: $navtext;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 
 .topnav ul li a:hover {
-    background-color: $navbgscuro;
-    color: $navcolorscuro;
+    background-color: $navbg;
+    color: $navtext;
 }
  
 .logo {
@@ -58,7 +58,7 @@ body {
 
 /* FOOTER */
 footer {
-    background-color: $footerbgscuro;
+    background-color: $primary;
     margin-top: 100px; 
 }
 
@@ -75,24 +75,24 @@ footer {
 .socialIcons a {
     text-decoration: none;
     padding: 10px;
-    background-color: $SIbgscuro;
+    background-color: $SIbg;
     margin: 15px;
     border-radius: 25%;
 }
 
 .socialIcons a i {
     font-size: 2em;
-    color: $SIscuro;
+    color: $primary;
 }
 
 /* Hover on Social Media Incons */
 .socialIcons a:hover {
-    background-color: $SIhoverbgscuro;
+    background-color: $SIhoverbg;
     transition: 0.5s;
 }
 
 .socialIcons a:hover i {
-    color: $SIhoverscuro;
+    color: $SIhover;
     transition: 0.5s;
 }
 
@@ -110,7 +110,7 @@ footer {
 }
 
 .footerNav ul li a {
-    color: $footernavscuro;
+    color: $text;
     margin: 20px;
     text-decoration: none;
     font-size: 0.9em;
@@ -122,14 +122,14 @@ footer {
 }
 
 .footerBottom {
-    background-color: $footerbottombgscuro;
+    background-color: $primary;
     padding: 20PX;
     text-align: center;
 }
 
 .footerBottom p {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: $footerbottomPscuro;
+    color: $text;
 }
 .designer {
     opacity: 0.7;

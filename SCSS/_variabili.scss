@@ -1,36 +1,34 @@
 /* BODY BACKGROUND */
-$bgscuro: rgb(0, 0, 0);
+$background: rgb(0, 0, 0);
 
 /* MENU */
-$navbgscuro: rgba(112,11,151, 0.8);
-$navcolorscuro: whitesmoke;
+$navbg: rgba(112,11,151, 0.8);
+$navtext: whitesmoke;
 
 /* TEXT */
 $text: whitesmoke;
 
-/* PORTFOLIO CARD */
-$cardbg: #700b97;
-$cardboxshadow: rgba(255, 255, 255, 0.4);
+/* CARD */
+$primary: #700b97;
+$cardboxshadow: rgba(40, 40, 40, 0.5);
 
 /* FOOTER */
-$footerbgscuro: #700b97;
-$SIbgscuro: whitesmoke;
-$SIscuro: #700b97;
-$SIhoverbgscuro: black;
-$SIhoverscuro: whitesmoke;
+$primary: #700b97; 
+$SIbg: whitesmoke;
+$primary: #700b97;
+$SIhoverbg: black;
+$SIhover: whitesmoke;
 
 /* FOOTER NAV e BOTTOM */
-$footernavscuro: whitesmoke;
-$footerbottombgscuro: #700b97;
-$footerbottomPscuro: whitesmoke;
+$primary: #700b97;
+$text: whitesmoke;
 
 /* FORM */
-$formlabelscuro: #8e05c2;
-$formcheckbox: #333;
-$inputborder: #ccc;
-$inputbgcolor: #efefef;
+$primary: #700b97; 
+$input: #717171;
+$inputbackground: #4a4a4a;
 
-$inputselectedbg: #adff2f;
+$accent: #929191;
 $buttoncolor: #ffffff;
 $buttonborder: #3e065f;
 $buttonp: #000;
