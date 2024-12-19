@@ -1,3 +1,4 @@
+<!-- Funzione head generale sito -->
 <?php
     function createHead($title, $cssLink) {
         echo '<head>

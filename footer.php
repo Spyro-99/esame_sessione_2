@@ -1,11 +1,7 @@
+<!-- Link css footer -->
+<link href="./CSS/scss_footer.min.css" rel="stylesheet">
+
 <!-- Footer sito -->
-
-<head>
-    <link href="./CSS/scss_footer.min.css" rel="stylesheet">
-</head>
-
-
-
 <footer> 
     <div class="footerContainer">
         <div class="socialIcons">                    

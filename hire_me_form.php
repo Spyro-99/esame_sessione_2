@@ -98,16 +98,11 @@ if ($inviato) {
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="hire_me_form">
-    <link href="./CSS/scss_hire_me_form.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
-    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
-    crossorigin="anonymous" referrerpolicy="no-referrer">
-    <title>hire_me_form</title>
-</head>
+    <!-- Funzione che richiama l'head e il css di questa pagina -->
+    <?php
+        include 'head.php';
+        createHead("Hire me", "./CSS/scss_hire_me_form.min.css");
+    ?>
 <body>  
     <!-- Funzione che richiama il menù di navigazione del sito -->
     <?php include 'menuNav.php'; ?> 
@@ -144,12 +139,16 @@ if ($inviato) {
                     <input type="tel" id="telefono" name="telefono" maxlength="15" minlenght="9" required placeholder = "(obbligatorio)" />
                     <label for="tel" <?php echo $clsErroreTelefono; ?>><?php echo $telefono; ?></label>
                 </div>
-                    <label for="oggetto" <?php echo $clsErroreOggetto; ?>>Oggetto</label>
-                    <input type="text" id="oggetto" name="oggetto" required maxlength="100" value="<?php echo $oggetto; ?>" />
-
-                    <label for="testo" <?php echo $clsErroreTesto; ?>>Testo</label>
-                    <textarea id="testo" name="testo" required maxlength="500"><?php echo $testo; ?></textarea>
-
+                <div class="hire-me-input">
+                    <label for="oggetto">Oggetto</label>
+                    <input type="text" id="oggetto" name="oggetto" required maxlength="100" placeholder="(obbligatorio)" />
+                    <label for="oggetto" <?php echo $clsErroreOggetto; ?>><?php echo $oggetto; ?></label>
+                </div>
+                <div class="hire-me-input">
+                    <label for="testo">Testo</label>
+                    <textarea id="testo" name="testo" required maxlength="500" placeholder="(obbligatorio)"></textarea>
+                    <label for="testo" <?php echo $clsErroreTesto; ?>><?php echo $testo; ?></label>
+                <7div>
                     <button type="submit" title="clicca per inviare il form">Submit</button>    
                 </fieldset>
             </form>    

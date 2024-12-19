@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+    <!-- Funzione che richiama l'head e il css di questa pagina -->
     <?php
         include 'head.php';
         createHead("Index", "./CSS/scss_index.min.css");
