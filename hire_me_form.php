@@ -7,7 +7,12 @@ use MieClassi\Utility as UT;
 $inviato = UT::richiestaHTTP("inviato");
 $inviato = ($inviato == null || $inviato != 1) ? false : true;
 
-
+$erroreNome = "";
+$erroreCognome = "";
+$erroreEmail = "";
+$erroreTelefono = "";
+$erroreOggetto = "";
+$erroreTesto = "";
 
 if ($inviato) {
     $valido = 0;
@@ -19,8 +24,8 @@ if ($inviato) {
     $oggetto = UT::richiestaHTTP("oggetto");
     $testo = UT::richiestaHTTP("testo");
 
+   
     $clsErrore = ' class="errore" ';
-
 
     // Validazione dei dati contenuti nel form
     if (($nome != "") && (strlen($nome) <= 25)) {
@@ -28,7 +33,7 @@ if ($inviato) {
     } else {
         $valido++;
         $clsErroreNome = $clsErrore;
-        $nome = "";
+        $erroreNome = "Inserisci il tuo nome*";
     }
 
     if (($cognome != "") && UT::controllaRangeStringa($cognome, 0, 25)) {
@@ -36,7 +41,7 @@ if ($inviato) {
     } else {
         $valido++;
         $clsErroreCognome = $clsErrore;
-        $cognome = "";
+        $cognome = "Inserisci il tuo cognome*";
     }
 
     if (($email != "") && UT::controllaRangeStringa($email, 10, 100) && filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -44,15 +49,15 @@ if ($inviato) {
     } else {
         $valido++;
         $clsErroreEmail = $clsErrore;
-        $email = "";
+        $email = "Inserisci la tua e-mail*";
     }
 
-    if (($telefono == "") || UT::controllaRangeStringa($telefono, 5, 20)) {
+    if (($telefono != "") || UT::controllaRangeStringa($telefono, 9, 15)) {
         $clsErroreTelefono = "";
     } else {
         $valido++;
         $clsErroreTelefono = $clsErrore;
-        $telefono = "";
+        $telefono = "Inserisci il tuo telefono*";
     }
 
     if (($oggetto != "") && UT::controllaRangeStringa($oggetto, 4, 100)) {
@@ -60,7 +65,7 @@ if ($inviato) {
     } else {
         $valido++;
         $clsErroreOggetto = $clsErrore;
-        $oggetto = "";
+        $oggetto = "Inserisci l'oggetto della tua richiesta*";
     }
 
     if (($testo != "") && UT::controllaRangeStringa($testo, 10, 500)) {
@@ -68,7 +73,7 @@ if ($inviato) {
     } else {
         $valido++;
         $clsErroreTesto = $clsErrore;
-        $testo = "";
+        $testo = "Inserisci il motivo della tua richiesta*";
     }
 
     $inviato = ($valido == 0) ? true : false;
@@ -97,7 +102,6 @@ if ($inviato) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="hire_me_form">
-    <link href="./CSS/scss_generale.min.css" rel="stylesheet">
     <link href="./CSS/scss_hire_me_form.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
@@ -105,15 +109,9 @@ if ($inviato) {
     <title>hire_me_form</title>
 </head>
 <body>  
-    <nav class="topnav">
-        <div class="logo">
-            <a href="index.php" title="clicca per accedere all'index"><img src="./img/logo_personale_negativo.png" alt="logo" width="30"></a>
-        </div>
-        <ul> 
-            <li><a href="hire_me_form.php" title="clicca per accedere al form">HIRE ME</a></li>  
-            <li><a href="portfolio.php" title="clicca per accedere al portfolio">PORTFOLIO</a></li>            
-        </ul>
-    </nav>
+    <!-- Funzione che richiama il menù di navigazione del sito -->
+    <?php include 'menuNav.php'; ?> 
+
     <?php
     if (!$inviato) {
     ?>      
@@ -126,19 +124,26 @@ if ($inviato) {
             <form action="hire_me_form.php?inviato=1" method="POST" novalidate>
                 <fieldset>
                     <legend>Contattaci</legend>
-
-                    <label for="nome" <?php echo $clsErroreNome; ?>>Nome</label>
-                    <input type="text" id="nome" name="nome" required value="<?php echo $nome; ?>" />
-
-                    <label for="cognome" <?php echo $clsErroreCognome; ?>>Cognome</label>
-                    <input type="text" id="cognome" name="cognome" value="<?php echo $cognome; ?>" />
-
-                    <label for="email" <?php echo $clsErroreEmail; ?>>E-mail</label>
-                    <input type="email" id="email" name="email" required value="<?php echo $email; ?>" />
-
-                    <label for="tel" <?php echo $clsErroreTelefono; ?>>Telefono</label>
-                    <input type="tel" id="telefono name="telefono" maxlength="15" value="<?php echo $telefono; ?>" />
-
+                <div class="hire-me-input">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" required value = "<?php echo $nome; ?>" placeholder = "(obbligatorio)"/>
+                    <label for="nome" <?php echo $clsErroreNome; ?>><?php echo $erroreNome; ?></label>
+                </div>
+                <div class="hire-me-input">
+                    <label for="cognome">Cognome</label>
+                    <input type="text" id="cognome" name="cognome" required placeholder = "(obbligatorio)" />
+                    <label for="cognome" <?php echo $clsErroreCognome; ?>><?php echo $cognome; ?></label>
+                </div>
+                <div class="hire-me-input">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required placeholder = "(obbligatorio)" />
+                    <label for="email" <?php echo $clsErroreEmail; ?>><?php echo $email; ?></label>
+                </div>
+                <div class="hire-me-input">
+                    <label for="tel">Telefono</label>
+                    <input type="tel" id="telefono" name="telefono" maxlength="15" minlenght="9" required placeholder = "(obbligatorio)" />
+                    <label for="tel" <?php echo $clsErroreTelefono; ?>><?php echo $telefono; ?></label>
+                </div>
                     <label for="oggetto" <?php echo $clsErroreOggetto; ?>>Oggetto</label>
                     <input type="text" id="oggetto" name="oggetto" required maxlength="100" value="<?php echo $oggetto; ?>" />
 
@@ -177,28 +182,8 @@ if ($inviato) {
     }
     ?>
     
-    <footer> 
-        <div class="footerContainer">
-            <div class="socialIcons">                    
-                <a href="http://www.linkdedin.com" title="clicca per accedere a linkdedin"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="http://www.instagram.com" title="clicca per accedere a instagram"><i class="fa-brands fa-instagram"></i></a>
-                <a href="http://www.twitter.com" title="clicca per accedere a x_twitter"><i class="fa-brands fa-square-x-twitter"></i></a>                    
-            </div>
-            <div class="footerNav">
-                <ul>
-                    <li><a href="tel:+39011.10101010" title="clicca per chiamare">+39 011.10101010</a><br></li>
-                    <li><a href="mailto:miamail@email.it" title="clicca per mandare una e-mail">miamail@email.it</a></li>
-                </ul>  
-            </div>     
-            <div class="footerBottom">
-                <p>Copyright &copy; 2024; Designed by <span class="designer">Erik Pontecorvi</span></p>
-                
-            </div>  
-        </div>
-                                       
-                      
-    </footer>  
-          
+    <!-- Funzione che richiama il footer del sito -->
+    <?php include 'footer.php'; ?>           
    
 </body>
 
