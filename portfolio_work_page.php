@@ -7,17 +7,15 @@
 
     $file = "fileJSON/portfolioCards.json"; // File contenente card dei lavori mostrati
     $arr = json_decode(UT::leggiTesto($file));
-    $selezionato = UT::trovaDaId($id, $arr)
+    $selezionato = UT::trovaDaId($id, $arr);    
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<!-- Funzione che richiama l'head e il css di questa pagina -->
+    <!-- Funzione che richiama l'head e il css di questa pagina -->
     <?php
         include 'head.php';
         createHead("Portfolio work page", "./CSS/scss_portfolio_work_page.min.css");
     ?>
-</head>
 <body>    
     <!-- Funzione che richiama il menù di navigazione del sito -->
     <?php include 'menuNav.php'; ?> 
@@ -26,17 +24,20 @@
         
         <img src="./img/Portfolio_work_img.jpg" alt="Work title" class="image">
         <div class="text-container">
-            <?php // Codice utilizzato per creare pagina dei lavori singoli in modo dinamico
-                echo "<h1>".$selezionato->heading."</h1> 
-                <p>".$selezionato->description."</p>";
-            ?>
+            <!-- Codice utilizzato per creare pagina dei lavori singoli in modo dinamico -->
+            <?php if ($selezionato): ?>
+                <h1><?php echo htmlspecialchars(rtrim($selezionato->heading, "-")); ?></h1>
+                <p><?php echo htmlspecialchars(rtrim($selezionato->description, "-")); ?></p>
+            <?php else: ?>
+                <p>Dati non disponibili</p>
+            <?php endif; ?>
         </div>
     </div>
     <hr> 
     <h2>My services</h2>   
     <div class="card-container">
         <?php
-            require('worklist.php') // File che contiene le card con i servizi che svolgo
+            require('worklist.php'); // File che contiene le card con i servizi che svolgo
         ?>
     </div>
     
